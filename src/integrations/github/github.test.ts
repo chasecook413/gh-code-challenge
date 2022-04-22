@@ -1,4 +1,4 @@
-import { getPullRequests } from "../../../src/integrations/github";
+import { getPullRequests } from "./";
 const TEST_PULL_REQUEST = [
     {
         number: 1,
@@ -9,7 +9,7 @@ const TEST_PULL_REQUEST = [
     }
 ];
 
-describe("test add function", () => {
+describe("github integration module", () => {
     it("should retrieve a single pull request successfully", async () => {
         const pullRequests = await getPullRequests('chasecook413', 'ts-tunnel');
         expect(pullRequests).toHaveLength(1);
