@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "build": "tsc",
-    "test": "jest"
+    "test:unit": "jest src/",
+    "test:integration": "jest test/"
   },
   "author": "",
   "license": "ISC",
