@@ -11,7 +11,7 @@ const TEST_PULL_REQUEST = [
     }
 ];
 
-describe("github integration API", () => {
+describe("/github API endpoints", () => {
     it("should respond 200 with valid data given an existing repo", async () => {
         const pullRequestsResponse = await axios.get(`${API_URL}${URL_PATH}/chasecook413/ts-tunnel/pull-requests`);
         const pullRequests = pullRequestsResponse.data;

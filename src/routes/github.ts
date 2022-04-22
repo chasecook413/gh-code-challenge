@@ -7,7 +7,7 @@ export async function getPullRequests(req: Request, res: Response) {
     const repo = req.params['repo'];
     try {
         const data = await Github.getPullRequests(owner, repo);
-        return successResponse(res, "Pull request data retreived", data);
+        return successResponse(res, "Pull request data retrieved", data);
     } catch (err) {
         if (err instanceof Error) {
             console.error(`Unable to retrieve pull request: ${err.message}`);

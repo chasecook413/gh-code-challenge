@@ -24,7 +24,6 @@ export async function getPullRequests(owner: string, repo: string) {
     let manipulatedData: PullRequestAPIResponse[] = await Promise.all(pullRequestList.map(mapPullRequest));
     // since we got them asynchronously,
     // order them to look like the example
-    // in the instructions
     manipulatedData.sort((a, b) => {
         return a.number - b.number;
     });

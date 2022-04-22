@@ -1,8 +1,12 @@
 
+interface PullRequestUser {
+    login: string;
+}
+
 export interface PullRequest {
     title: string;
     number: number;
-    user: any;
+    user: PullRequestUser;
     commits: number;
 }
 
